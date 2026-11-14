@@ -1,0 +1,341 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>InfoTatva - Knowledge Hub</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #081321;
+  color: white;
+}
+
+header {
+  background: #101f32;
+  padding: 20px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #20d9ef;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 12px;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #20d9ef;
+}
+
+.hero {
+  text-align: center;
+  padding: 75px 20px;
+  background: linear-gradient(135deg,#102c48,#123f58,#081321);
+}
+
+.hero h1 {
+  font-size: 38px;
+  margin-bottom: 18px;
+}
+
+.hero h1 span {
+  color: #20d9ef;
+}
+
+.hero p {
+  color: #c1d0df;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.search {
+  max-width: 480px;
+  margin: auto;
+  display: flex;
+  gap: 8px;
+}
+
+.search input {
+  flex: 1;
+  min-width: 0;
+  padding: 14px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+}
+
+.search button {
+  padding: 14px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #20d9ef;
+  color: #081321;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.section {
+  padding: 45px 7%;
+}
+
+.section h2 {
+  margin-bottom: 25px;
+  font-size: 26px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #14263b;
+  padding: 25px;
+  border-radius: 14px;
+  border: 1px solid #263d55;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #20d9ef;
+}
+
+.emoji {
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  color: #20d9ef;
+  margin-bottom: 12px;
+}
+
+.card p {
+  color: #bdcbd8;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+#message {
+  color: #20d9ef;
+  margin-top: 20px;
+}
+
+.about {
+  background: #102036;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.about p {
+  color: #bdcbd8;
+  line-height: 1.8;
+  max-width: 600px;
+  margin: 15px auto;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #9aabba;
+  background: #050d17;
+  font-size: 13px;
+}
+
+@media(max-width:600px) {
+  header {
+    justify-content: center;
+    text-align: center;
+  }
+
+  nav a {
+    margin: 0 6px;
+  }
+
+  .hero h1 {
+    font-size: 29px;
+  }
+
+  .section {
+    padding: 35px 6%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">InfoTatva.</div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#categories">Categories</a>
+    <a href="#about">About</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+
+  <h1>Welcome to <span>InfoTatva</span></h1>
+
+  <p>
+    ज्ञान की दुनिया में आपका स्वागत है।<br>
+    Discover Knowledge. Explore Everything.
+  </p>
+
+  <div class="search">
+
+    <input
+      type="search"
+      id="searchBox"
+      placeholder="Search information..."
+      onkeydown="if(event.key==='Enter') searchInfo()">
+
+    <button type="button" onclick="searchInfo()">
+      Search
+    </button>
+
+  </div>
+
+  <p id="message"></p>
+
+</section>
+
+<section class="section" id="categories">
+
+  <h2>Explore Categories</h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <div class="emoji">🌍</div>
+      <h3>General Knowledge</h3>
+      <p>दुनिया, इतिहास और सामान्य ज्ञान से जुड़ी रोचक जानकारियाँ।</p>
+    </div>
+
+    <div class="card">
+      <div class="emoji">🔬</div>
+      <h3>Science & Technology</h3>
+      <p>विज्ञान, खोज और नए आविष्कारों की जानकारी।</p>
+    </div>
+
+    <div class="card">
+      <div class="emoji">💻</div>
+      <h3>Technology</h3>
+      <p>कंप्यूटर, इंटरनेट और डिजिटल दुनिया सीखें।</p>
+    </div>
+
+    <div class="card">
+      <div class="emoji">📈</div>
+      <h3>Business & Finance</h3>
+      <p>बिजनेस, पैसा और आर्थिक ज्ञान की जानकारी।</p>
+    </div>
+
+    <div class="card">
+      <div class="emoji">🚀</div>
+      <h3>Space & Universe</h3>
+      <p>अंतरिक्ष, ग्रहों और ब्रह्मांड के रहस्य जानें।</p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="about" id="about">
+
+  <h2>About InfoTatva</h2>
+
+  <p>
+    InfoTatva एक ज्ञान और जानकारी का प्लेटफॉर्म है।
+    हमारा उद्देश्य लोगों तक उपयोगी, रोचक और
+    ज्ञानवर्धक जानकारी पहुँचाना है।
+  </p>
+
+</section>
+
+<footer>
+  © 2026 InfoTatva. All Rights Reserved.
+  <p>Knowledge Is Power 💡</p>
+</footer>
+
+<script>
+
+function searchInfo() {
+
+  let query = document
+    .getElementById("searchBox")
+    .value.toLowerCase().trim();
+
+  let cards = document.querySelectorAll(".card");
+
+  let found = 0;
+
+  cards.forEach(function(card) {
+
+    let content = card.innerText.toLowerCase();
+
+    if(query === "" || content.includes(query)) {
+
+      card.style.display = "block";
+
+      if(query !== "") {
+        found++;
+      }
+
+    } else {
+
+      card.style.display = "none";
+
+    }
+
+  });
+
+  let message = document.getElementById("message");
+
+  if(query === "") {
+
+    message.innerText = "सभी Categories दिखाई दे रही हैं।";
+
+  } else if(found > 0) {
+
+    message.innerText = found + " Category मिली!";
+
+    document.getElementById("categories")
+      .scrollIntoView({behavior:"smooth"});
+
+  } else {
+
+    message.innerText = "कोई जानकारी नहीं मिली!";
+
+  }
+
+}
+
+</script>
+
+</body>
+</html>
